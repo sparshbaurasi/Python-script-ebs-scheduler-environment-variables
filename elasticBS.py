@@ -16,6 +16,4 @@ for i in res1['Environments']:
                                     AutoScalingGroupName=res3['EnvironmentResources']['AutoScalingGroups'][0]['Name'],
                                     MinSize=0,
                                     MaxSize=0
-                                )                    
-               
-                    
+                                    )
