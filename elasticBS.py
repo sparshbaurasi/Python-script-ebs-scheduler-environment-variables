@@ -12,8 +12,6 @@ for i in res1['Environments']:
                  my_list=[k['Value']]
                  for key in my_list:
                     res3 = elasticbeanstalk.describe_environment_resources(EnvironmentName=key)
-                    res4 = autoscaling.update_auto_scaling_group(
-                                    AutoScalingGroupName=res3['EnvironmentResources']['AutoScalingGroups'][0]['Name'],
+                    res4 = autoscaling.update_auto_scaling_group(AutoScalingGroupName=res3['EnvironmentResources']['AutoScalingGroups'][0]['Name'],
                                     MinSize=0,
-                                    MaxSize=0
-                                    )
+                                    MaxSize=0)
